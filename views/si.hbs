@@ -1,0 +1,13 @@
+<script src="javascripts/si.js"></script>
+<script>
+    var game;
+    function launch() {
+        game = new Game({width:630,height:600});
+    }
+    document.onload = launch();
+    document.addEventListener("keypress", function(e){
+        if (game && game.isGameOver() && e.keyCode == 13) {
+            launch()
+        }
+    });
+</script>
